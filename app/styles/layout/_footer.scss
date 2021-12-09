@@ -1,0 +1,95 @@
+.footer{
+  display: block;
+  background-color: #F8F8F8;
+  padding-top: 18rem;
+  padding-bottom: 10rem;
+  &-container{
+    @include flexBox(start, space-between);
+    gap: 23rem;
+  }
+  &-left{
+    max-width: 34rem;
+  }
+  &-logo{
+    margin-bottom: 2rem;
+  }
+  &-desc{
+    line-height: calc(30 / 16);
+    span{
+      font-weight: 500;
+    }
+    margin-bottom: 3rem;
+  }
+  &-socials{
+    @include flexBox(center);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    &-link{
+      display: inline-block;
+      @include size(3.4rem);
+      background-color: white;
+      border-radius: 50%;
+      @include flexBox(center, center);
+      color: $primary-color;
+      box-shadow: 0 10px 116px 0 $title-color;
+      transition: all 0.25s;
+      &:hover{
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  }
+  &-copyright{
+    color: $text-light-color;
+    span{
+      font-weight: 500;
+    }
+  }
+  &-right{
+    @include flexBox(start, space-between);
+    gap: 126px;
+  }
+  &-title{
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  &-item{
+    margin-bottom: 1rem;
+  }
+  @include maxWidth(1279px){
+    &-container{
+      gap: 14rem;
+    }
+  }
+  @include maxWidth(1023px){
+    &-container{
+      gap: 8rem;
+    }
+    &-left{
+      max-width: 26rem;
+    }
+    &-right{
+      gap: 7rem;
+    }
+  }
+  @include maxWidth(767px){
+    padding-bottom: 5rem;
+    &-container{
+      display: block;
+    }
+    &-left{
+      margin-bottom: 3rem;
+      max-width: 100%;
+    }
+    &-right{
+      gap: 3rem;
+    }
+    &-title{
+      font-size: 1.4rem;
+    }
+    &-link{
+      font-size: 1.2rem;
+    }
+  }
+}

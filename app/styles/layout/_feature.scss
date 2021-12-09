@@ -1,0 +1,58 @@
+.feature {
+  display: block;
+  margin-bottom: 13rem;
+  &-container {
+    padding-left: 3.5rem;
+    @include flexBox(end, space-between);
+    gap: 17rem;
+  }
+  &-img {
+    width: 100%;
+    max-width: 508px;
+  }
+  &-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: calc(50 / 35);
+    margin-bottom: 2rem;
+  }
+  &-desc {
+    line-height: calc(30 / 16);
+    margin-bottom: 2rem;
+  }
+  &-item {
+    @include flexBox(center, start);
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    gap: 0 1rem;
+    img {
+      @include size(2.4rem);
+    }
+  }
+  &-text {
+    font-size: 1.4rem;
+  }
+  @include maxWidth(1279px){
+    &-container{
+      gap: 5rem;
+    }
+  }
+  @include maxWidth(1023px){
+    margin-bottom: 9rem;
+    &-container{
+      display: block;
+      padding-left: 0;
+    }
+    &-img{
+      margin: 0 auto 3rem;
+    }
+  }
+  @include maxWidth(767px){
+   margin-bottom: 5rem;
+   &-title{
+     font-size: 2.4rem;
+   }
+  }
+}

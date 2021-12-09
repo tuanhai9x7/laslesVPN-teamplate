@@ -1,0 +1,97 @@
+body {
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: $text-color;
+  background-color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+input,
+button {
+  font-family: $primary-font;
+  color: $text-color;
+}
+button {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $title-color;
+  font-weight: bold;
+}
+
+.block {
+  &-box {
+    text-align: center;
+    max-width: 555px;
+    margin: 0 auto;
+  }
+  &-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: calc(50 / 35);
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    max-width: 38.3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-desc {
+    margin-bottom: 6rem;
+    line-height: calc(30 / 16);
+  }
+  @include maxWidth(767px){
+    &-title{
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.btn {
+  &.btn--primary {
+    font-size: 1.6rem;
+    color: $pink-color;
+    font-weight: 500;
+    padding: 1.3rem 4.5rem;
+    border: 1px solid $pink-color;
+    border-radius: 9999px;
+    transition: all 0.25s linear;
+    &:hover {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: white;
+    }
+  }
+  &.btn--secondary {
+    padding-left: 6.3rem;
+    padding-right: 6.3rem;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    font-weight: 700;
+  }
+  &.btn--third {
+    background-color: $primary-color;
+    color: white;
+    padding: 1.8rem 7.8rem;
+    border-radius: 10px;
+    border: 0;
+    text-transform: capitalize;
+    font-weight: 700;
+    box-shadow: 0 30px 54px -5px rgba(245, 56, 56, 0.35);
+  }
+}
+section, footer{
+  display: none;
+}

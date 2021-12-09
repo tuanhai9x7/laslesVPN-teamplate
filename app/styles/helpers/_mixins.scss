@@ -1,0 +1,22 @@
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin minWidth($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin flexBox($align-items: stretch, $justify-content: start, $direction: row, $wrap: nowrap) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin size($width: 100px, $height: $width) {
+  width: $width;
+  height: $height;
+}

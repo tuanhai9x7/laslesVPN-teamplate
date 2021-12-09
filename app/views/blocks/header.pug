@@ -1,0 +1,16 @@
+header.header
+  .container 
+    .header-container
+      a.header-logo(href="#") 
+        img(src="images/Logo.png", alt="logo").header-logo
+      .header-list  
+        ul.header-menu
+          +headerMenuItem("About")
+          +headerMenuItem("Features")
+          +headerMenuItem("Pricing")
+          +headerMenuItem("Testimonials")
+          +headerMenuItem("Help")
+        .header-buttons 
+          a.header-signIn(href="#") Sign in 
+          button.btn.btn--primary Sign up 
+      i(class="fa fa-bars header-toggle")

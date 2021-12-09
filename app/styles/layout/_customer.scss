@@ -1,0 +1,152 @@
+.customer {
+  display: block;
+  padding-bottom: 6.5rem;
+  &-container {
+  }
+  &-list {
+    @include flexBox(stretch, space-between);
+    gap: 5rem;
+    margin-bottom: 8.3rem;
+    position: relative;
+  }
+  &-item {
+    padding: 3rem;
+    border: 2px solid $border-color;
+    border-radius: 10px;
+    transition: all 0.25s;
+    box-sizing: 0 70px 114px -40px rgba(13, 16, 37, 0.06);
+    margin-right: 5rem;
+    &:hover {
+      border-color: $primary-color;
+    }
+    &-top {
+      @include flexBox(center, space-between);
+      margin-bottom: 2rem;
+    }
+  }
+  &-user {
+    @include flexBox(center, space-between);
+    gap: 21px;
+  }
+  &-name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &-country {
+    font-size: 1.4rem;
+  }
+  &-rate {
+    @include flexBox(center);
+    gap: 10px;
+    &-number {
+      color: $title-color;
+    }
+  }
+  &-comment {
+    line-height: calc((30 / 16));
+    color: $title-color;
+  }
+  &-bottom {
+    @include flexBox(center, space-between);
+  }
+  &-indicators {
+    @include flexBox;
+    gap: 15px;
+    &-item {
+      @include size(1.5rem);
+      background-color: #dde0e4;
+      border-radius: 999px;
+      cursor: pointer;
+      &.active {
+        width: 45px;
+        background-color: $primary-color;
+      }
+    }
+  }
+  &-control {
+    @include flexBox;
+    gap: 20px;
+    &-item {
+      @include flexBox(center, center);
+      @include size(6rem);
+      border-radius: 50%;
+      border: 1px solid $primary-color;
+      color: $primary-color;
+      font-size: 3rem;
+      transition: all 0.25s;
+      &:hover {
+        color: white;
+        background-color: $primary-color;
+      }
+    }
+  }
+  &-list {
+    display: block;
+  }
+  @include maxWidth(767px) {
+    padding-bottom: 5rem;
+    &-list {
+      margin-bottom: 0;
+    }
+    &-item {
+      margin-right: 3rem;
+    }
+  }
+  @include maxWidth(374px) {
+    &-item {
+      padding: 2rem;
+      margin-right: 2rem;
+    }
+    &-name {
+      font-size: 1.4rem;
+    }
+    &-country {
+      font-size: 1.2rem;
+    }
+    &-rate {
+      &-number {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+.slick-arrow {
+  @include flexBox(center, center);
+  @include size(6rem);
+  border-radius: 50%;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  font-size: 3rem;
+  transition: all 0.25s;
+  &:hover {
+    color: white;
+    background-color: $primary-color;
+  }
+  content: none;
+  position: absolute;
+  bottom: -12rem;
+}
+.slick-next {
+  right: 4.2rem;
+}
+.slick-prev {
+  right: 12.2rem;
+}
+.slick-dots {
+  @include flexBox;
+  gap: 15px;
+  position: absolute;
+  bottom: -9.75rem;
+  left: 0;
+  li {
+    @include size(1.5rem);
+    background-color: #dde0e4;
+    border-radius: 999px;
+    cursor: pointer;
+    &.slick-active {
+      width: 45px;
+      background-color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.subcribe {
+  display: block;
+  margin-bottom: -116px;
+  // position: relative;
+  // transform: translateY(50%);
+  &-container {
+    padding: 5.8rem 7rem;
+    @include flexBox(center, space-between);
+    box-shadow: 0 34px 114px -30px rgba(13, 16, 37, 0.06);
+  }
+  &-content{
+    max-width: 37rem;
+
+  }
+  &-title{
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: calc(45 / 35);
+    margin-bottom: 2rem;
+  }
+  @include maxWidth(1023px){
+    &-container{
+      display: block;
+    }
+    &-content{
+      margin-bottom: 3rem;
+    }
+  }
+  @include maxWidth(767px){
+    &-container{
+      padding: 0;
+    }
+    &-title{
+      font-size: 2.4rem;
+    }
+    &-btn.btn{
+      padding-left: 3.8rem;
+      padding-right: 3.8rem;
+    }
+  }
+}

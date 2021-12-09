@@ -1,0 +1,47 @@
+.network {
+  display: block;
+  &-content {
+    margin-top: 15.5rem;
+    img {
+      margin: 0 auto;
+    }
+  }
+  padding-bottom: 3.6rem;
+  @include maxWidth(1023px) {
+    &-content {
+      margin-top: 9rem;
+    }
+  }
+  @include maxWidth(767px) {
+    &-content {
+      margin-top: 5rem;
+    }
+  }
+}
+.partner {
+  display: block;
+  &-container {
+    @include flexBox(center, space-between);
+  }
+  padding-bottom: 5rem;
+  @include maxWidth(1279px) {
+    &-container {
+      gap: 5rem;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      img {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+    }
+  }
+  @include maxWidth(767px) {
+    padding-bottom: 0;
+  }
+}

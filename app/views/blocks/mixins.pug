@@ -1,0 +1,28 @@
+mixin headerMenuItem(title)
+  li.header-menu-item 
+    a.header-menu-link(href="#")= title 
+
+mixin blockBox(title, desc)
+  .block-box
+    h3.block-title= title 
+    p.block-desc= desc 
+
+mixin planFeature(text, src="images/plan-check.png")
+  li.plan-feature
+    img(src= src alt="").plan-feature-img
+    p.plan-feature-text= text
+
+mixin planItem( itle, price="Free",src="images/plan.png")
+  .plan-item
+    .plan-top  
+      .plan-img 
+        img(src= src alt="")
+      h3.plan-title=title
+      ul.plan-list 
+        block 
+    .plan-bottom 
+      .plan-price 
+        span.plan-price-number= price 
+        if price != "Free"
+          span.plan-price-each  / mo
+      button.btn.btn--primary.btn--secondary Select
