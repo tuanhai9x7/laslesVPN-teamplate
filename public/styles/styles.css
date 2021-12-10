@@ -934,7 +934,9 @@ footer {
     .subcribe {
       margin-bottom: 5rem; }
       .subcribe-container {
-        padding: 0; }
+        padding: 0;
+        -webkit-box-shadow: unset;
+        box-shadow: unset; }
       .subcribe-title {
         font-size: 2.4rem; }
       .subcribe-btn.btn {
