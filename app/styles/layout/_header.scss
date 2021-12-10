@@ -3,14 +3,14 @@
   &-container {
     @include flexBox(center, space-between);
   }
-  &-menu {
-    &-item {
-      transition: color 0.25s linear;
-    }
-    &-item:hover {
-      color: $pink-color;
-    }
-  }
+  // &-menu {
+  //   &-item {
+  //     transition: color 0.25s linear;
+  //   }
+  //   // &-item:hover {
+  //   //   color: $pink-color;
+  //   // }
+  // }
   &-signIn {
     color: $title-color;
     font-weight: 500;
@@ -95,6 +95,34 @@
       @include flexBox(center, space-between);
       &-item:not(:last-child) {
         margin-right: 4rem;
+      }
+    }
+  }
+  @media (hover: hover){
+    &-menu{
+      &-item{
+        transition: all .25s;
+        position: relative;
+        &:hover{
+          color: $primary-color;
+          &::after{
+            width: 100%;
+            left: 0;
+            right: auto;
+          }
+        }
+        &::after{
+          transition: all .25s;
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: auto;
+          right: 0;
+          display: inline-block;
+          width: 0;
+          height: 3px;
+          background-color: $primary-color;
+        }
       }
     }
   }
