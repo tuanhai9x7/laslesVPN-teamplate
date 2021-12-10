@@ -27,6 +27,7 @@
     }
   }
   @include maxWidth(767px){
+    margin-bottom: 5rem;
     &-container{
       padding: 0;
     }

@@ -66,7 +66,8 @@ h6 {
   border: 1px solid #F53855;
   border-radius: 9999px;
   -webkit-transition: all 0.25s linear;
-  transition: all 0.25s linear; }
+  transition: all 0.25s linear;
+  background-color: white; }
   .btn.btn--primary:hover {
     background-color: #F53838;
     border-color: #F53838;
@@ -90,7 +91,13 @@ h6 {
   -webkit-box-shadow: 0 30px 54px -5px rgba(245, 56, 56, 0.35);
   box-shadow: 0 30px 54px -5px rgba(245, 56, 56, 0.35); }
 
-section, footer {
+@media screen and (max-width: 767px) {
+  .btn.btn--third {
+    -webkit-box-shadow: 0 15px 54px -5px rgba(245, 56, 56, 0.35);
+    box-shadow: 0 15px 54px -5px rgba(245, 56, 56, 0.35); } }
+
+section,
+footer {
   display: none; }
 
 .wrapper {
@@ -357,13 +364,17 @@ section, footer {
       padding-bottom: 5rem; }
       .about-container {
         display: block;
-        padding: 0; }
+        padding: 0;
+        -webkit-box-shadow: 0 15px 114px -35px rgba(13, 16, 37, 0.06);
+        box-shadow: 0 15px 114px -35px rgba(13, 16, 37, 0.06); }
       .about-item {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
         justify-content: start; }
         .about-item:not(:last-child) {
-          margin-bottom: 3rem; } }
+          margin-bottom: 3rem; }
+        .about-item:nth-child(2) {
+          border: none; } }
 
 .feature {
   display: block;
@@ -920,13 +931,15 @@ section, footer {
     .subcribe-content {
       margin-bottom: 3rem; } }
   @media screen and (max-width: 767px) {
-    .subcribe-container {
-      padding: 0; }
-    .subcribe-title {
-      font-size: 2.4rem; }
-    .subcribe-btn.btn {
-      padding-left: 3.8rem;
-      padding-right: 3.8rem; } }
+    .subcribe {
+      margin-bottom: 5rem; }
+      .subcribe-container {
+        padding: 0; }
+      .subcribe-title {
+        font-size: 2.4rem; }
+      .subcribe-btn.btn {
+        padding-left: 3.8rem;
+        padding-right: 3.8rem; } }
 
 .footer {
   display: block;
@@ -1045,7 +1058,8 @@ section, footer {
       gap: 7rem; } }
   @media screen and (max-width: 767px) {
     .footer {
-      padding-bottom: 5rem; }
+      padding-bottom: 5rem;
+      padding-top: 5rem; }
       .footer-container {
         display: block; }
       .footer-left {

@@ -75,6 +75,7 @@
   }
   @include maxWidth(767px){
     padding-bottom: 5rem;
+    padding-top: 5rem;
     &-container{
       display: block;
     }
