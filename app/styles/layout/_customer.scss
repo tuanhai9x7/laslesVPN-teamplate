@@ -15,7 +15,8 @@
     border-radius: 10px;
     transition: all 0.25s;
     box-sizing: 0 70px 114px -40px rgba(13, 16, 37, 0.06);
-    margin-right: 5rem;
+    // margin-right: 5rem;
+    min-height: 28.5rem;
     &:hover {
       border-color: $primary-color;
     }
@@ -89,14 +90,18 @@
     &-list {
       margin-bottom: 0;
     }
-    &-item {
-      margin-right: 3rem;
+    &-item{
+      padding: 2rem;
+    }
+    .slick-track {
+      // margin-right: 3rem;
+      gap: 3rem;
     }
   }
   @include maxWidth(374px) {
     &-item {
       padding: 2rem;
-      margin-right: 2rem;
+      // margin-right: 2rem;
     }
     &-name {
       font-size: 1.4rem;
@@ -126,6 +131,10 @@
   content: none;
   position: absolute;
   bottom: -12rem;
+}
+.slick-track{
+  @include flexBox;
+  gap: 5rem;
 }
 .slick-next {
   right: 4.2rem;
